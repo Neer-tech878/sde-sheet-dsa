@@ -1,0 +1,23 @@
+//used math formula equilateral algorithm[gcd(A,B)=gcd(A%B,B) || if A>B]
+class Solution {
+    public int gcdOfOddEvenSums(int n) {
+        int a=n*n;
+        int b=n*(n+1);
+        while(a>0 && b>0){
+            if(b>a) b=b%a;
+            else a=a%b;
+        }
+            if(b==0) return a;
+            else return b;
+    }
+
+//an actuall even less time complexity 0ms is possible😄
+//as since knowingly Formulae = GCD(SUM OF CONSECUTIVE n ODD,SUM OF CONSECUTIVE n EVEN)=n 
+                                                   (or)
+                                             GCD(n²,n*(n+1))=n
+
+class Solution {
+    public int gcdOfOddEvenSums(int n){
+return n
+} 
+(❁´◡`❁)
