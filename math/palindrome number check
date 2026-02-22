@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int n=x;
+        int ans=0;
+        while(x>0){
+            ans=ans*10+x%10;//automatic addition of last digit to the reversed i.e ans
+            x/=10;
+        }
+        return ans==n;//automatic false for x=0 & x<0
+        }
+    }
+    //for input fields
+    class Main{
+    psvm(String[] args){
+    Scanner sc =new Scanner(System.in);
+    int x = sc.nextInt();
+    Solution obj=new Solution();
+    boolean result = obj.isPalindrome(x);
+    System.out.println(result);
+    }
