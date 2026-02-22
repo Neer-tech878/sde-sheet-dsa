@@ -1,0 +1,18 @@
+//used Arraylist so eaasily sorted at end withoud taking long for loop of complexity n
+//used big oh of ✓n complexity since they are factors
+class Solution {
+    public static void print_divisors(int n) {
+        ArrayList<Integer> list= new ArrayList<>();
+        for(int i=1;i*i<=n;i++){
+            if(n%i==0) {list.add(i);
+            if(i!=n/i) {list.add(n/i);
+        }
+        }
+        }
+        Collections.sort(list);
+        for(int x : list){
+            System.out.print(x+" ");
+        }
+    }
+}
+//final Collection.list get sorted the added divisors and finally printed(●'◡'●)
