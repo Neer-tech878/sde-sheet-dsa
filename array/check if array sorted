@@ -1,6 +1,8 @@
 class Solution {
     public boolean isSorted(int[] arr) {
         for(int i=0;i<arr.length-1;i++){
+ // if current element is greater than next,
+            // array is not sorted in increasing order
             if(arr[i]>arr[i+1]){
             return false;
         }
@@ -8,3 +10,21 @@ class Solution {
     return true;
 }
 }
+🧠 Why this is optimal
+
+Time Complexity:
+O(n) ✅
+Single pass through the array
+Stops early if disorder is found
+
+Space Complexity:
+O(1) ✅
+No extra space used
+
+Technique:
+Linear traversal
+Adjacent element comparison
+
+Why not sorting?
+Sorting would take O(n log n) ❌
+We only need to check, not rearrange
