@@ -1,0 +1,28 @@
+class Solution {
+
+    // 🔹 Function to find the largest element in the array
+    // 🔹 Technique used: Linear Traversal (Running Maximum)
+    public static int largest(int[] arr) {
+
+        // 📌 Step 1: Store the size of the array
+        // We don’t know the array size beforehand, so we use arr.length
+        int n = arr.length;
+
+        // 📌 Step 2: Assume the first element is the largest initially
+        int max = arr[0];
+
+        // 📌 Step 3: Traverse the array linearly
+        for (int i = 0; i < n; i++) {
+
+            // 🔍 Compare current element with the current maximum
+            if (arr[i] >= max) {
+
+                // 🔁 Update max if a larger (or equal) element is found
+                max = arr[i];
+            }
+        }
+
+        // ✅ Step 4: Return the final maximum value
+        return max;
+    }
+}
