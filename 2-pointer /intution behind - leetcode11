@@ -1,0 +1,22 @@
+//most Best approach or intuition way can think in building of while loop Better two pointer approach in skipping the unwanted lines
+
+🔹 Step 1: Start with the brute force idea
+You want the max area between two vertical lines.
+Brute force: check every pair (i, j). That’s O(n²). Too slow.
+So you think: “Can I move pointers smartly instead of checking everything?”
+
+🔹 Step 2: Notice the limiting factor
+For any pair (left, right), area = (right - left) × min(height[left], height[right]).
+The shorter wall is always the limiting factor.
+If you move the taller wall inward, width shrinks but height doesn’t increase → area gets worse.
+So you must move the pointer at the shorter wall.
+
+🔹 Step 3: Realize the width shrinks
+Every inward move reduces width.
+To get a bigger area, you need a taller wall to compensate.
+If the new wall is ≤ h, then height doesn’t increase → area shrinks.
+So you don’t even need to check those walls.
+
+//Previously calculated height which is minimum height in trapping water is h=min(height[left],height[right])
+Therefore, while( left<right && height[left] <= h) {    (//no use that line in trapping skip that)  left++ }
+                                            
